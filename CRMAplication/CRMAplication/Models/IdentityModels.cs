@@ -29,5 +29,7 @@ namespace CRMAplication.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<CRMAplication.Models.Car> Cars { get; set; }
     }
 }
