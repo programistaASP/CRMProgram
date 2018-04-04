@@ -22,7 +22,12 @@ namespace CRMAplication.Controllers
         // GET: Cars
         public ActionResult Index()
         {
-            return View(db.Cars.ToList());
+            if (_carLogin.IsUserAuthorized())
+            {
+                return View("Index", _carRepository.GetWhere(x => x.Id > 0));
+            }
+
+            return View("~/Views/Cars/IndexUnAuthorized.cshtml", _carRepository.GetWhere(x => x.Id > 0).Where(x => x.Aktywność));
         }
 
         // GET: Cars/Details/5
@@ -32,7 +37,8 @@ namespace CRMAplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Car car = db.Cars.Find(id);
+
+            Car car = _carRepository.GetWhere(x => x.Id == id).FirstOrDefault();
             if (car == null)
             {
                 return HttpNotFound();
@@ -55,14 +61,15 @@ namespace CRMAplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Cars.Add(car);
-                db.SaveChanges();
+
+                _carRepository.Create(car);
+                var message = _emailService.CreateMailMessage(car);
+                _emailService.SendEmail(message);
+
                 return RedirectToAction("Index");
             }
-
             return View(car);
         }
-
         // GET: Cars/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -70,7 +77,7 @@ namespace CRMAplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Car car = db.Cars.Find(id);
+            Car car = _carRepository.GetWhere(x => x.Id == id).FirstOrDefault();
             if (car == null)
             {
                 return HttpNotFound();
@@ -83,12 +90,12 @@ namespace CRMAplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Brand,Model,RegistryNumber,IsActive,DateCreate,Modificationdate,RecordAuthor,RecordModificationAuthor")] Car car)
+        public ActionResult Edit(Car car)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(car).State = EntityState.Modified;
-                db.SaveChanges();
+                _carRepository.Update(car);
+
                 return RedirectToAction("Index");
             }
             return View(car);
@@ -101,7 +108,7 @@ namespace CRMAplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Car car = db.Cars.Find(id);
+            Car car = _carRepository.GetWhere(x => x.Id == id).FirstOrDefault();
             if (car == null)
             {
                 return HttpNotFound();
@@ -114,19 +121,10 @@ namespace CRMAplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Car car = db.Cars.Find(id);
-            db.Cars.Remove(car);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            Car car = _carRepository.GetWhere(x => x.Id == id).FirstOrDefault();
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            _carRepository.Delete(car);
+            return RedirectToAction("Index");
         }
     }
 }
