@@ -5,7 +5,7 @@ using System.Web;
 
 namespace CRMAplication.BussinesLogic
 {
-    public class CarLogin
+    public class CarLogin: ICarLogin
     {
         public bool IsUserAuthorized()
         {
