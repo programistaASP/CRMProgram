@@ -117,3 +117,4 @@ C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRM
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.csproj.CopyComplete
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.dll
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.pdb
+C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.csprojResolveAssemblyReference.cache
