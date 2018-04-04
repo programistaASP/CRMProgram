@@ -2,14 +2,23 @@
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using CRMAplication.Interfaces;
 using CRMAplication.Models;
 
 namespace CRMAplication.Controllers
 {
     public class CarsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly ICarRepository _carRepository;
+        private readonly ICarLogin _carLogin;
+        private readonly IEmailService _emailService;
 
+        public CarsController(ICarRepository carRepository, ICarLogin carLogin, IEmailService emailService)
+        {
+            _carRepository = carRepository;
+            _carLogin = carLogin;
+            _emailService = emailService;
+        }
         // GET: Cars
         public ActionResult Index()
         {

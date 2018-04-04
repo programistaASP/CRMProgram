@@ -113,7 +113,6 @@ C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\bin\Microsoft
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\bin\Microsoft.AI.Web.xml
-C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.csprojResolveAssemblyReference.cache
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.csproj.CoreCompileInputs.cache
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.csproj.CopyComplete
 C:\Users\witar\Source\Repos\CRMProgram\CRMAplication\CRMAplication\obj\Debug\CRMAplication.dll

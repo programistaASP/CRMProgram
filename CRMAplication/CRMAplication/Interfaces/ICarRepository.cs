@@ -1,9 +1,9 @@
 ﻿using CRMAplication.Models;
 
 namespace CRMAplication.Interfaces
+
 {
-    public interface ICarLogin
+    public interface ICarRepository : IAbstractRepository<Car>
     {
-        bool IsUserAuthorized();
     }
 }

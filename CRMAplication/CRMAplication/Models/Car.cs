@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CRMAplication.Interfaces;
+using System;
 
 namespace CRMAplication.Models
 {
-    public class Car
+    public class Car : IBasicEntity
     {
         public int Id { get; set; }
         public string Marka { get; set; }
@@ -12,6 +13,6 @@ namespace CRMAplication.Models
         public DateTime DateCreate { get; set; }
         public DateTime Modificationdate { get; set; }
         public string RecordAuthor { get; set; }
-        public string RecordModificationAuthor { get; set; }
+        public string RecordModificationAuthor { get; set; }        
     }
 }
