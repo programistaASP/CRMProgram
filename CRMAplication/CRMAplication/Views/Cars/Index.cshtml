@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<CRMAplication.Models.Car>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista samochodów do roboty";
 }
 
-<h2>Index</h2>
+<h2>Lista samochodów do roboty</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Brand)
+            @Html.DisplayNameFor(model => model.Marka)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Model)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegistryNumber)
+            @Html.DisplayNameFor(model => model.NumerRejestracyjny)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsActive)
+            @Html.DisplayNameFor(model => model.Aktywność)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateCreate)
@@ -41,16 +41,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Brand)
+            @Html.DisplayFor(modelItem => item.Marka)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Model)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RegistryNumber)
+            @Html.DisplayFor(modelItem => item.NumerRejestracyjny)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
+            @Html.DisplayFor(modelItem => item.Aktywność)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateCreate)
