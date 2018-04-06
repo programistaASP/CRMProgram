@@ -9,7 +9,7 @@ namespace CRMAplication.Models
         public string Marka { get; set; }
         public string Model { get; set; }
         public string NumerRejestracyjny { get; set; }
-        public bool Aktywność { get; set; }
+        public bool Aktywnosc { get; set; }
         public DateTime DateCreate { get; set; }
         public DateTime Modificationdate { get; set; }
         public string RecordAuthor { get; set; }

@@ -17,7 +17,7 @@ namespace CRMAplication.Repository
             {
                 entity.DateCreate = DateTime.Now;
                 entity.Modificationdate = entity.DateCreate;
-                entity.Aktywność = true;
+                entity.Aktywnosc = true;
                 context.Set<T>().Add(entity);
                 context.SaveChanges();
             }
@@ -46,7 +46,7 @@ namespace CRMAplication.Repository
             using (var context = new ApplicationDbContext())
             {
                 entity.RecordModificationAuthor = HttpContext.Current.User.Identity.Name;
-                entity.Aktywność = false;
+                entity.Aktywnosc = false;
                 context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
             }

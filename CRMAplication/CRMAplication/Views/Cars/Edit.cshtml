@@ -17,7 +17,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.DateCreate)
-        @Html.HiddenFor(model => model.Aktywność)
+        @Html.HiddenFor(model => model.Aktywnosc)
         @Html.HiddenFor(model => model.RecordAuthor)
         @Html.HiddenFor(model => model.Modificationdate)
 
@@ -46,11 +46,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Aktywność, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Aktywnosc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Aktywność)
-                    @Html.ValidationMessageFor(model => model.Aktywność, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Aktywnosc)
+                    @Html.ValidationMessageFor(model => model.Aktywnosc, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
