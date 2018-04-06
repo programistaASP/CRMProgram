@@ -45,9 +45,7 @@ namespace CRMAplication.Repository
         {
             using (var context = new ApplicationDbContext())
             {
-                entity.RecordModificationAuthor = HttpContext.Current.User.Identity.Name;
-                entity.Activity = false;
-                context.Entry(entity).State = EntityState.Modified;
+                context.Entry(entity).State = EntityState.Deleted;
                 context.SaveChanges();
             }
         }
