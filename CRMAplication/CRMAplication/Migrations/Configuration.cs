@@ -10,7 +10,6 @@ namespace CRMAplication.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CRMAplication.Models.ApplicationDbContext";
         }
 
         protected override void Seed(CRMAplication.Models.ApplicationDbContext context)
