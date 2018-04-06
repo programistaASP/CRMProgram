@@ -12,11 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Marka)
+            @Html.DisplayNameFor(model => model.Brand)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Marka)
+            @Html.DisplayFor(model => model.Brand)
         </dd>
 
         <dt>
@@ -28,19 +28,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NumerRejestracyjny)
+            @Html.DisplayNameFor(model => model.Registrationnumber)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NumerRejestracyjny)
+            @Html.DisplayFor(model => model.Registrationnumber)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Aktywnosc)
+            @Html.DisplayNameFor(model => model.Activity)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Aktywnosc)
+            @Html.DisplayFor(model => model.Activity)
         </dd>
 
         <dt>
@@ -81,7 +81,7 @@
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.DateCreate)
-        @Html.HiddenFor(model => model.Aktywnosc)
+        @Html.HiddenFor(model => model.Activity)
         @Html.HiddenFor(model => model.RecordAuthor)
         @Html.HiddenFor(model => model.Modificationdate)
 

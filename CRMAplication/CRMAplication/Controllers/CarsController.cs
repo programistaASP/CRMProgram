@@ -27,7 +27,7 @@ namespace CRMAplication.Controllers
                 return View("Index", _carRepository.GetWhere(x => x.Id > 0));
             }
 
-            return View("~/Views/Cars/IndexUnAuthorized.cshtml", _carRepository.GetWhere(x => x.Id > 0).Where(x => x.Aktywnosc));
+            return View("~/Views/Cars/IndexUnAuthorized.cshtml", _carRepository.GetWhere(x => x.Id > 0).Where(x => x.Activity));
         }
 
         // GET: Cars/Details/5

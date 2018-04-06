@@ -9,6 +9,6 @@ namespace CRMAplication.Interfaces
         DateTime Modificationdate { get; set; }
         string RecordAuthor { get; set; }
         string RecordModificationAuthor { get; set; }
-        bool Aktywnosc { get; set; }
+        bool Activity { get; set; }
     }
 }
