@@ -13,6 +13,7 @@ namespace CRMAplication.Models
         public DateTime DateCreate { get; set; }
         public DateTime Modificationdate { get; set; }
         public string RecordAuthor { get; set; }
-        public string RecordModificationAuthor { get; set; }        
+        public string RecordModificationAuthor { get; set; }      
+        public string DescriptionOfProblem { get; set; }
     }
 }

@@ -11,7 +11,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        <th >
             @Html.DisplayNameFor(model => model.Brand)
         </th>
         <th>
@@ -34,6 +34,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.RecordModificationAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionOfProblem)
         </th>
         <th></th>
     </tr>
@@ -63,6 +66,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RecordModificationAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionOfProblem)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
