@@ -1,8 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("https://i.pinimg.com/originals/69/c0/cd/69c0cd2021e87ee56abe9a702092690a.jpg");
-    background-repeat: no-repeat;
+    background-color: ghostwhite;
     
 }
 
@@ -10,6 +9,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color:ghostwhite
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -17,6 +17,8 @@
 */
 .dl-horizontal dt {
     white-space: normal;
+    
+
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
