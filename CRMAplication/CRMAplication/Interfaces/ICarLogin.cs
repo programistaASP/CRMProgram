@@ -1,6 +1,4 @@
-﻿using CRMAplication.Models;
-
-namespace CRMAplication.Interfaces
+﻿namespace CRMAplication.Interfaces
 {
     public interface ICarLogin
     {

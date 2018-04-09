@@ -9,7 +9,7 @@ namespace CRMAplication.Service
     {
         private SmtpClient _smtpClient;
         private const string _login = "witar1@gmail.com";
-        private const string _pass = "";
+        private const string _pass = "Heroes840715";
 
         public EmailService()
         {
