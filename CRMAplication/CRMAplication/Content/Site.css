@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: lightskyblue;
+    background-color: navajowhite;
     
 }
 
@@ -9,8 +9,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: lightskyblue;
-
+    background-color: lemonchiffon;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -27,4 +26,13 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.con {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
 }
