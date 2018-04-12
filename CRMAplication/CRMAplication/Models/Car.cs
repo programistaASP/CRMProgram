@@ -1,13 +1,16 @@
-﻿using CRMAplication.Interfaces;
+﻿using CRMAplication.Models.Enums;
 using System;
+using CRMAplication.Interfaces;
 
 namespace CRMAplication.Models
 {
     public class Car : IBasicEntity
     {
         public int Id { get; set; }
-        public string Brand { get; set; }
+        public Brand Brand { get; set; }
         public string Model { get; set; }
+        public CarType CarType { get; set; }
+        public Capacity capacity { get; set; }
         public string Registrationnumber { get; set; }
         public bool Activity { get; set; }
         public DateTime DateCreate { get; set; }
